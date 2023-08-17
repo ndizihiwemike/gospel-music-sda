@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Music Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="bar.html">
+</head>
+<body>
+	<header>
+		<dir class="logo">
+			<img src="R.jpeg" >
+		</dir>
+
+		<h1>SEVENTHDAY ADVENTIST SONGS <MArquee>@SDA SONGS.COM</MArquee></h1>
+		 <div class="search">
+			<input type="text" id="results" class="srch" placeholder="Enter search query">
+			<a href="./bar.html"><button class="btn" onclick="search()">search</button></a>
+			
+		</div>
+		<div id="results"></div>
+		<nav>
+			<ul>
+				<li><a href="" ><span class="home-hypertext">Home</span></a>
+				</li>
+				<li><a href="#">Artists</a></li>
+				<li><a href="./ACCAPELLA" >Songs</a>
+					<div class="sub-manu">
+                        <ul>
+								<audio controls  loop>
+									<source src="./ACCAPELLA/i'll fly away.mp3" type="audio/mp3">
+								</audio>
+                                <button onclick="so"></button>
+                        </ul>
+						
+
+                    </div>
+					
+				</li>
+				<li><a href="./accappella original">Playlists</a></li>
+				<li><a href="./album" >Albums</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Welcome to My Music Website</h2>
+			<p><b>Explore the latest music from your favorite chior.</b></p>
+			<a href="./SCRIPTURAL SONGS" class="button">Listen Now</a>
+		</section>
+		<section>
+			<h2><b>Top Songs</b></h2>
+			<ul class="song-list">
+				<li><a href="#">Song 1</a>
+					<audio controls  loop>
+						<source src="./accappella original/Happiness_is_the_Lord_!(256k).mp3" type="audio/mp3">
+					</audio>
+				
+				</li>
+				<li><a href="#">Song 2</a>
+					<audio controls  loop>
+						<source src="./accappella original/10,000_Reasons_(Bless_The_Lord)_-_A_Cappella_Hymn(256k).mp3" type="audio/mp3">
+						
+					</audio>
+				
+				</li>
+				<li><a href="#">Song 3</a>
+					<audio controls  loop>
+						<source src="./AUD-20230318-WA0218.mp3" type="audio/mp3">
+					</audio>
+				
+				</li>
+				<li><a href="#">Song 4</a>
+					<audio controls  loop>
+						<source src="./accappella original/Anywhere_with_Jesus_I_can_safely_go(256k).mp3" type="audio/mp3">
+					</audio>
+				
+				</li>
+			</ul>
+		</section>
+		<audio controls  loop>
+			<source src="./ACCAPELLA/Everybody.mp3" type="audio/mp3">
+		  </audio>
+		  <meter value="20" min="0" max="100"></meter>
+		  <progress value="80" max="100"></progress>
+  
+	</main>
+	<footer>
+		<p><b>&copy; 2023 My Music Website. All rights reserved.</b></p>
+	</footer>
+	<div >
+	<script aria-live="results">
+		function search() {
+		  // Get the search bar input element.
+		  const searchBar = document.getElementById(searchBar);
+		
+		  // Get the search query.
+		  const searchQuery = searchBar.value;
+		
+		  // Search for the content on the website.
+		  const results = document.querySelectorAll("result");
+		
+		  // Display the search results.
+		  for (const result of results) {
+			if (result.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
+			  result.style.display = "block";
+			} else {
+			  result.style.display = "none";
+			}
+		  }
+		  async function Search(){
+				const response = await fetch("srch");
+				const textData = await response.text();
+				console.log(textData);
+				results.innerHTML = textData;
+				results.style.display = "block";
+		  }
+		}
+		</script>
+		</div>
+</body>
+
+</html>

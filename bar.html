@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Bar</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+</body>
+
+<script aria-live="results">
+function search() {
+  // Get the search bar input element.
+  const searchBar = document.getElementById(searchBar);
+
+  // Get the search query.
+  const searchQuery = searchBar.value;
+
+  // Search for the content on the website.
+  const results = document.querySelectorAll("result");
+
+  // Display the search results.
+  for (const result of results) {
+    if (result.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
+      result.style.display = "block";
+    } else {
+      result.style.display = "none";
+    }
+  }
+  async function Search(){
+        const response = await fetch("search");
+        const textData = await response.text();
+        console.log(textData);
+        results.innerHTML = textData;
+        results.style.display = "block";
+  }
+}
+</script>
+</html>
