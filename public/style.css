@@ -1,0 +1,126 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: orangered;
+	color: green;
+	padding: 7px;
+}
+h1{
+	background: linear-gradient(to bottom, transparent, dodgerblue);
+    background: radial-gradient(circle, red, rgb(225, 233, 225));
+	animation-name: colored;
+
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+	background-repeat: no-repeat;
+    background-size: cover;/*cover, contain, auto*/
+    background-position: top;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 50px;
+	right: 80px;
+	align-items: center;
+	left: 50px;
+}
+nav {
+	background:  radial-gradient(circle, red, rgb(225, 233, 225));
+}
+nav a {
+	color: green;
+	text-decoration: none;
+	font-family:Arial, Helvetica, sans-serif;
+	align-items: center;
+}
+ul li a.href {
+    background-color: chocolate;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+	padding: 20px;
+	align-items: center;
+
+}
+.logo img{
+    float: left;
+    width: 120px;
+    height: auto;
+    left: 40%;
+}
+.sub-manu{
+    top: 50px;
+    position: relative;
+	display: none;
+}
+.sub-manu ul{
+    position: relative;
+	align-content: center;
+}
+section {
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	background: linear-gradient(to bottom, transparent, dodgerblue);
+    background: radial-gradient(circle, red, rgb(225, 233, 225));
+	animation-name: colored;
+    background-size: 5px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+	background-repeat: no-repeat;
+    background-size: cover;/*cover, contain, auto*/
+    background-position: top;
+	align-content: center;
+}
+
+.artist-list li,
+.song-list li {
+	margin-bottom: 10px;
+}
+
+.button {
+	background-color: #f00;
+	color: greenyellow;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #900;
+	cursor: pointer;
+}
+.srch{
+	padding: 10px 40px;
+	border-radius: 20vh;
+	font-size: 18px;
+	font-family: 'Times New Roman';
+	color: black;
+	margin-bottom:  20px;
+    border: #f00;
+	align-content: center;
+}
+.btn{
+	padding: 10px 40px;
+	border-radius: 20vh;
+	font-size: 18px;
+	color: black;
+	border: #f00;
+}
